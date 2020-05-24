@@ -31,7 +31,7 @@ Rules define the checks which are executed to validate the resulting permissions
 The structure of the file is like this:
 
    [
-     { "principal: "<the principal>",
+     { "principals: "<the principals>",
        "itempath": "<the path to check>",
        "privileges": "<privilegest to check for>",
        "policy" : "<ALLOW|DENY>"
@@ -42,5 +42,8 @@ The structure of the file is like this:
    ] 
 
 (It's a simple JSON array of tupels.)
+
+Multiple principals can be provided (separated by comma), the same applies to privileges. The list of valid privileges can be taken from https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/spi/security/privilege/PrivilegeConstants.html
+
 
 
