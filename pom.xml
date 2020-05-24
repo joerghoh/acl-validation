@@ -23,6 +23,11 @@
     <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
     <description>ACL Validation</description>
+    
+    <scm>
+        <developerConnection>scm:git:git@github.com:joerghoh/acl-validation.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
     <modules>
         <module>all</module>
