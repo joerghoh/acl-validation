@@ -23,7 +23,7 @@
     <parent>
         <groupId>de.joerghoh.aem</groupId>
         <artifactId>acl-validation</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
