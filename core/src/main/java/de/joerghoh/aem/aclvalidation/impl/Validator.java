@@ -10,6 +10,7 @@ import org.apache.sling.hc.api.Result;
 import org.apache.sling.hc.util.FormattingResultLog;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
@@ -20,6 +21,7 @@ import org.slf4j.LoggerFactory;
 
 
 @Component(immediate=true, 
+        configurationPolicy = ConfigurationPolicy.REQUIRE,
         service={HealthCheck.class,Validator.class},
         property = {
                 HealthCheck.NAME+"= Acl Validator",
