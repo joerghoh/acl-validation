@@ -63,6 +63,8 @@
                     <preparationGoals>clean install</preparationGoals>
                     <goals>install</goals>
                     <releaseProfiles>release</releaseProfiles>
+                    <arguments>-Dmaven.javadoc.skip=true</arguments>
+
                 </configuration>
                 <dependencies>
                     <dependency>
