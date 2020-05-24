@@ -101,9 +101,13 @@ public class Evaluator {
     }
     
     
-    boolean convertPolicyToBoolean(String policyString) {
+    boolean convertPolicyToBoolean(String policyString) throws EvaluationException {
         String s = policyString.trim().toUpperCase();
-        return "ALLOW".equals(s);
+        if (s.equals("ALLOW")) { return true; }
+        if (s.equals("DENY")) {
+            return false;
+        }
+        throw new EvaluationException(String.format("Policy '%s' is not allowed, only 'DENY' or 'ALLOW'", policyString));
     }
     
     List<Privilege> convertPrivileges (PrivilegeManager privilegeManager, List<String> privileges) throws EvaluationException {
