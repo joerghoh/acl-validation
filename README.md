@@ -30,7 +30,8 @@ Rules define the checks which are executed to validate the resulting permissions
 
 The structure of the file is like this:
 
-   [
+```
+    [
      { "principals: "<the principals>",
        "itempath": "<the path to check>",
        "privileges": "<privilegest to check for>",
@@ -39,7 +40,8 @@ The structure of the file is like this:
      {
        ...
      }
-   ] 
+    ] 
+```
 
 (It's a simple JSON array of tupels.)
 
