@@ -3,6 +3,7 @@ package de.joerghoh.aem.aclvalidation.impl;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.sling.hc.api.HealthCheck;
 import org.apache.sling.hc.api.Result;
@@ -89,6 +90,7 @@ public class Validator implements HealthCheck, ValidatorMBean {
     }
     
     
+    
     //------- 
     
 
@@ -111,8 +113,8 @@ public class Validator implements HealthCheck, ValidatorMBean {
 
     @Override
     public String startValidation() {
-        validateRules();
-        return "foo";
+        List<EvaluationResultBean> result = validateRules();
+        return result.stream().map(EvaluationResultBean::toString).collect(Collectors.joining("\n"));
     }
     
     
